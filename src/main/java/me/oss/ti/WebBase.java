@@ -1,6 +1,5 @@
 package me.oss.ti;
 
-import javax.annotation.Resource;
 import javax.servlet.ServletContext;
 
 import org.apache.commons.logging.Log;
@@ -9,15 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.context.ServletContextAware;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
-
-import com.insoul.copartner.service.IDemandService;
-import com.insoul.copartner.service.IMediaService;
-import com.insoul.copartner.service.IProjectService;
-import com.insoul.copartner.service.ISystemSettingService;
-import com.insoul.copartner.service.IUserFriendsService;
-import com.insoul.copartner.service.IUserService;
-import com.insoul.copartner.service.IUtilityService;
-import com.insoul.copartner.service.IVerifyCodeService;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @author 刘飞
@@ -29,35 +20,17 @@ public class WebBase implements ServletContextAware {
 	
 	protected Log log = LogFactory.getLog(getClass());
 
-    @Resource
-    protected IUserService userService;
-    
-    @Resource
-    protected ISystemSettingService systemSettingService;
-
-    @Resource
-    protected IUtilityService utilityService;
-    
-    @Resource
-    protected IDemandService demandService;
-    
-    @Resource
-    protected IMediaService mediaService;
-    
-    @Resource
-    protected IProjectService projectService;
-
-    @Resource
-    protected IUserFriendsService userFriendsService;
-    
-    @Resource
-    protected IVerifyCodeService verifyCodeService;
-
 	@Autowired
 	@Qualifier("multipartResolver")
 	protected CommonsMultipartResolver multipartResolver;
 
 	private ServletContext servletContext;
+	
+	protected ModelAndView createModelView(String viewName) {
+		ModelAndView mv = new ModelAndView(viewName);
+		mv.addObject("cdn", "/assets/");
+		return mv;
+	}
 
 	public ServletContext getServletContext() {
 		return servletContext;

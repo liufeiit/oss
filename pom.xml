@@ -17,6 +17,16 @@
 	</properties>
 	<dependencies>
 		<dependency>
+			<groupId>com.insoul</groupId>
+			<artifactId>copartner-domain</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+            <groupId>com.insoul</groupId>
+            <artifactId>copartner-dao</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+		<dependency>
 			<groupId>me.ocs.apns</groupId>
 			<artifactId>ocs-apns</artifactId>
 			<version>1.0.0.Beta7-SNAPSHOT</version>
@@ -35,11 +45,6 @@
 			<groupId>me.ocs.oss</groupId>
 			<artifactId>ocs-oss</artifactId>
 			<version>1.0.0-RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>com.insoul</groupId>
-			<artifactId>copartner-service</artifactId>
-			<version>1.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>batik</groupId>
