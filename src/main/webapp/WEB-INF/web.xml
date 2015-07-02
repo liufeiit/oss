@@ -54,7 +54,7 @@
 	
 	<filter>
 		<filter-name>log4jNDCFilter</filter-name>
-		<filter-class>org.springframework.web.filter.Log4jNestedDiagnosticContextFilter</filter-class>
+		<filter-class>me.ocs.commons.log4j.Log4jMDCLoggingFilter</filter-class>
 	</filter>
 
 	<servlet>
