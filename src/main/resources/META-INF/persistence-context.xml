@@ -17,7 +17,7 @@
 	<context:annotation-config />
 
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-		<property name="persistenceUnitName" value="oss" />
+		<property name="persistenceUnitName" value="core" />
 		<property name="packagesToScan" value="com.insoul.copartner.domain" />
 	</bean>
 

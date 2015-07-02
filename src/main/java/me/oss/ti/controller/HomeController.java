@@ -15,10 +15,11 @@ import me.oss.ti.WebBase;
 @Controller
 @RequestMapping("/")
 public class HomeController extends WebBase {
-	
+
+	@RequestMapping("/login")
 	public ModelAndView login() {
 		ModelAndView mv = createModelView("login");
-		
+
 		return mv;
 	}
 }
