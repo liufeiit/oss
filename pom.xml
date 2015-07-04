@@ -22,10 +22,15 @@
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-            <groupId>com.insoul</groupId>
-            <artifactId>copartner-dao</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
+			<groupId>com.insoul</groupId>
+			<artifactId>copartner-dao</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.insoul</groupId>
+			<artifactId>copartner-service</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
 		<dependency>
 			<groupId>me.ocs.apns</groupId>
 			<artifactId>ocs-apns</artifactId>
